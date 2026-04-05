@@ -3,7 +3,7 @@ syntax = "proto3";
 package auth;
 
 
-option go_package = "github.com/MaynixX/sso-protos;ssov1";
+option go_package = "github.com/MaynixX/sso-protos/gen/go/proto/sso;ssov1";
 
 service Auth {
     // Register user
