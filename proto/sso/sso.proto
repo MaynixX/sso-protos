@@ -12,6 +12,8 @@ service Auth {
     rpc Login (LoginRequest) returns (LoginResponse);
     // Checks if user is admin
     rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+    // Checks if user is admin
+    rpc GetEmail (GetEmailRequest) returns (GetEmailResponse);
 }
 
 message RegisterRequest {
@@ -34,4 +36,11 @@ message IsAdminRequest {
 }
 message IsAdminResponse {
     bool is_admin = 1;
+}
+
+message GetEmailRequest {
+    int64 user_id = 1;
+}
+message GetEmailResponse {
+    string email = 1;
 }
